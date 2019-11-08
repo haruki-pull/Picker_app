@@ -1,3 +1,1 @@
-<% @souvenirs.each do |s| %>
-    <%= s.name %>
-<% end %>
+<%= render partial:"souvenir", collection: @souvenirs %>
