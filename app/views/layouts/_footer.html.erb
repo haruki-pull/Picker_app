@@ -1,0 +1,31 @@
+<footer>
+<nav class="navbar navbar-expand-md  navbar-light bg-light">
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#bs-navi" aria-controls="bs-navi" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="bs-navi">
+    <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><%= link_to "トップページへ", root_path, class:"nav-link" %></li>
+    </ul>
+  </div>
+</nav>
+</footer>
+
+
+<%
+=begin
+%>  
+  <div class="container bg-secondary">
+
+    <nav>
+      <ul class="nav navbar-nav navbar-dark">
+        <li><%= link_to "ホーム", root_path %></li>
+        <li><%= link_to "ログイン", '#' %></li>
+        <li><%= link_to "投稿", post_path %></li>
+      </ul>
+    </nav>
+</div>
+<%
+=end
+%>
