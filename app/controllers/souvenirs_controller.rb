@@ -1,12 +1,17 @@
 class SouvenirsController < ApplicationController
   def new
+    @souvenir = Souvenir.new
+  end
+
+  def index
+    @souvenirs = Souvenir.all
   end
 
   def create
   end
 
   def show
-    @souvenirs = Souvenir.all
+  
   end
 
   def edit
@@ -18,6 +23,4 @@ class SouvenirsController < ApplicationController
   def destroy
   end
 
-  def index
-  end
 end

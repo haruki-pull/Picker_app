@@ -13,9 +13,14 @@ class Souvenir < ApplicationRecord
     private
     #画像サイズのバリデーション
     def picture_size
-        if picture.size > 5.megabytes
-          errors.add(:picture, "should be less than 5MB")
-        end
+      if picture.size > 5.megabytes
+        errors.add(:picture, "should be less than 5MB")
       end
+    end
+
+    def souvenir_params
+      params.require(:params).permit(:name, :description, :picture)
+    end
+  
 
 end

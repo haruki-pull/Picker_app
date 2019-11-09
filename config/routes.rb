@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-root 'souvenirs#show'
+root 'souvenirs#index'
 get '/post', to: 'souvenirs#edit'
 #get '/login',to: 'sessions/new'
 resources :souvenirs

@@ -1,2 +1,12 @@
-<h1>Souvenirs#new</h1>
-<p>Find me in app/views/souvenirs/new.html.erb</p>
+<%= form_for(@souvenir) do |f| %>
+
+　　<%= f.label :name %>
+　　<%= f.file_field :name %>
+
+　　<%= f.label :description %>
+　　<%= f.file_field :description %>
+
+　　<%= f.label :picture %>
+　　<%= f.file_field :picture %> 
+
+<% end %>
