@@ -1,0 +1,12 @@
+<div>
+    <p class = "souvenir_name"><%= souvenir.name%></p>
+    <p class = "souvenir_spot"><%= souvenir.spot%></p>
+    <p class = "souvenir_price"><%= souvenir.price%></p>
+    <p class = "souvenir_genre"><%= souvenir.genre%></p>
+    <p class = "souvenir_comment"><%= souvenir.comment%></p>
+    　<% if souvenir.picture? %>
+    　　<%= image_tag souvenir.picture.thumb.url %>
+    　<% else %>
+        <p>noimages</p>
+    　<% end %>
+</div>
