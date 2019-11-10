@@ -1,12 +1,51 @@
 <%= form_for(@souvenir) do |f| %>
 
 　　<%= f.label :name %>
-　　<%= f.file_field :name %>
+    <%= f.text_field:name %>
 
-　　<%= f.label :description %>
-　　<%= f.file_field :description %>
+　　<%= f.label :spot %>
+    <%= f.text_field:spot %>
+
+　　<%= f.label :price %>
+    <%= f.text_field:price %>
 
 　　<%= f.label :picture %>
-　　<%= f.file_field :picture %> 
+　　<%= f.file_field :picture %>
+
+　　<%= f.label :genre %>
+    <%= f.select :genre, [ ["スイーツ","sweets"], ["お酒","alchole"] ] %>
+
+　　<%= f.label :comment %>
+　　<%= f.text_area :comment %>
+
+    <%= f.submit %>
 
 <% end %>
+
+<%
+=begin
+%>
+    <% if @souvenir.picture.present? %>
+        <%= picture_tag @souvenir.picture, id: 'picture_prev' %>
+
+    <% end %>
+
+    <script type="text/javascript">
+  $(function() {
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+    $('#picture_prev').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#souvenir_picture").change(function(){
+        readURL(this);
+    });
+  });
+</script>
+<%
+=end
+%>

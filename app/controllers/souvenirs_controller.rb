@@ -4,7 +4,7 @@ class SouvenirsController < ApplicationController
   end
 
   def index
-    @souvenirs = Souvenir.all
+    @souvenirs = Souvenir.paginate(page: params[:page], per_page: 5)
   end
 
   def create
@@ -23,4 +23,9 @@ class SouvenirsController < ApplicationController
   def destroy
   end
 
+  private
+
+  def souvenir_params
+    params.require(:souvenir).permit(:name, :spot, :price, :picture, :genre, :comment)
+  end
 end

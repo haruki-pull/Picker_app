@@ -6,9 +6,8 @@ class Souvenir < ApplicationRecord
     validates:comment, presence: true,length: {maximum:250}
     validates:spot, presence: true
     validates:price, presence: true
-    #validates:picture, presence: true
     validates:genre, presence: true
-    #validate :picture_size
+    validate :picture_size
 
     private
     #画像サイズのバリデーション

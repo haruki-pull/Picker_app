@@ -39,6 +39,42 @@ textarea {
   }
 }
 
+.container{
+  padding-top:5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/*pagination*/
+.pagination>li>a { 
+  font-size: 1.3rem;     
+  border: none;     /*枠線をなくす*/
+  color: #696969;   /*文字の色を変える*/
+  &:hover {        
+    border-radius: 15px;    /*角を丸くする*/
+  }
+}
+.pagination>.active>a {     
+  background: #93c9ff;     /*背景の色を変える*/
+  border-radius: 15px;     /*角を丸くする*/
+}
+body > div > .pagination{
+  margin:auto;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -69,6 +105,7 @@ p {
 a{
     color:white;
 }
+
 
 /* header */
 #logo {
@@ -103,11 +140,11 @@ footer {
 
 /*souvenirs/indexページ*/
 .souvenir_box{
-  border-bottom: rgba(0, 0, 0, 0.5);
-  margin: auto;
-  text-align: center;
   width:70%;
-  padding-top: 5rem;
+  margin: auto;
+  padding: 3rem;
+  text-align: center;
+  border-bottom: dashed 3px #87CEFA;
     .souvenir_text-items{
       padding-top: 3rem;
     }
