@@ -8,6 +8,12 @@ class SouvenirsController < ApplicationController
   end
 
   def create
+    @souvenir = Souvenir.create(souvenir_params)
+      if @souvenir.save
+        redirect_to action: 'index'
+      else
+        render 'new'
+      end
   end
 
   def show
