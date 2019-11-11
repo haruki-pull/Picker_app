@@ -1,6 +1,7 @@
 class SouvenirsController < ApplicationController
   def new
     @souvenir = Souvenir.new
+    flash[:info] = "項目を記入してください"
   end
 
   def index
@@ -10,6 +11,7 @@ class SouvenirsController < ApplicationController
   def create
     @souvenir = Souvenir.create(souvenir_params)
       if @souvenir.save
+        flash[:success] = "投稿に成功しました"
         redirect_to action: 'index'
       else
         render 'new'
