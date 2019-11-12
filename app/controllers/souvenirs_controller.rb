@@ -1,4 +1,5 @@
 class SouvenirsController < ApplicationController
+
   def new
     @souvenir = Souvenir.new
     flash[:info] = "項目を記入してください"
@@ -23,6 +24,7 @@ class SouvenirsController < ApplicationController
   end
 
   def edit
+    @souvenir = Souvenir.find(params[:id])
   end
 
   def update

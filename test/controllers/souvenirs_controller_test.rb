@@ -1,18 +1,24 @@
 require 'test_helper'
 
 class SouvenirsControllerTest < ActionDispatch::IntegrationTest
+
+  def setup
+    @souvenir = souvenirs(:one)
+  end  
+  debugger
+
   test "should get new" do
-    get souvenirs_new_url
+    get post_path
     assert_response :success
   end
 
   test "should get show" do
-    get souvenirs_show_url
+    get root_path
     assert_response :success
   end
 
   test "should get edit" do
-    get souvenirs_edit_url
+    get edit_souvenir_path(@souvenir)
     assert_response :success
   end
 

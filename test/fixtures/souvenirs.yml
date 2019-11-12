@@ -3,7 +3,6 @@
 one:
   name: MyString
   spot: MyString
-  email: MyString
   price: 1
   good: 1
   picture: MyString
@@ -13,7 +12,6 @@ one:
 two:
   name: MyString
   spot: MyString
-  email: MyString
   price: 1
   good: 1
   picture: MyString
