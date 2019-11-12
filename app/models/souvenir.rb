@@ -18,7 +18,7 @@ class Souvenir < ApplicationRecord
     end
 
     def souvenir_params
-      params.require(:params).permit(:name, :description, :picture)
+      params.require(:souvenirs).permit(:name, :spot, :price, :genre, :picture, :comment)
     end
   
 
