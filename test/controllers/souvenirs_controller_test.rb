@@ -13,7 +13,7 @@ class SouvenirsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get show" do
-    get root_path
+    get souvenir_path(@souvenir)
     assert_response :success
   end
 
@@ -26,9 +26,33 @@ class SouvenirsControllerTest < ActionDispatch::IntegrationTest
 #souvenirs/new
 
   test "新規投稿失敗" do
+    get post_path
   #newページにアクセス
+  post souvenirs_path, params: {souvenir: {name: "foobar",
+                                          spot: "foobar",
+                                          price: 1000,
+                                          picture:"foobar",
+                                          genre:"foobar",
+                                          comment:"foobar"}}
   #各値がnilの状態でpostする
+  follow_redirect!
+  assert_template 'souvenirs/new'
   #souvenirs/newページにリダイレクトされる
   end
 
 end
+
+# <%
+# =begin
+# %>
+
+# post souvenirs_path, params: {name: "foobar",
+# spot: "foobar",
+# price: 1000,
+# picture:"foobar",
+# genre:"foobar,"
+# comment:"foobar"}
+
+# <%
+# =end
+# %>
