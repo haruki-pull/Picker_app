@@ -22,7 +22,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'rspec-rails'
+  gem 'capybara', '>= 2.15'
+  gem 'rspec-rails', '~> 3.9'
   gem "factory_bot_rails"
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rails-controller-testing'
@@ -37,8 +38,6 @@ group :development do
 end
 
 group :test do
- 
-  gem 'capybara', '>= 2.15'
   gem 'database_cleaner', '~> 1.0.1'
   gem 'launchy', '~> 2.3.0'
   gem 'selenium-webdriver', '~> 3.142', '>= 3.142.6'

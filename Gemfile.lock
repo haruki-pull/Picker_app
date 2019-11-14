@@ -284,7 +284,7 @@ DEPENDENCIES
   rails (~> 5.2.3)
   rails-controller-testing
   rmagick (~> 4.0)
-  rspec-rails
+  rspec-rails (~> 3.9)
   sass-rails (~> 5.0)
   selenium-webdriver (~> 3.142, >= 3.142.6)
   spring

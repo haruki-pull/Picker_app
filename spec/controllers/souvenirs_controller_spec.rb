@@ -2,8 +2,10 @@ require 'rails_helper'
 
 RSpec.describe SouvenirsController, type: :controller do
     describe 'GET #index'
-    render_views
-
+    #viewファイル描画の前に必要なおまじない 
+      render_views
+    
+    #各itが行われる前に毎回行われる処理
     before do
       get :index
     end
