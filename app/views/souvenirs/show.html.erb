@@ -1,0 +1,6 @@
+<%= image_tag 'no_picture.png' %>
+　<% if @souvenir.picture?  %>
+　　<%= image_tag @souvenir.picture.thumb.url ,size: '300x300' %>
+　<% else %>
+　　<%= image_tag 'no_picture.png',size: '300x300' %>
+　<% end %>

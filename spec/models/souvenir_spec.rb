@@ -4,7 +4,7 @@ require 'rails_helper'
 #メソッドの働きに問題がないか
 RSpec.describe Souvenir, type: :model do
       it "モデルデータが実際に生成されるか" do
-            souvenir = FactoryBot.create(:souvenir)
+            souvenir = FactoryBot.create(:pass_souvenir)
             
             expect(souvenir).to be_valid
       end
