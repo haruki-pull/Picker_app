@@ -1,4 +1,5 @@
 <%= will_paginate  @souvenirs %>
-<% debugger%>
-<%= render partial:"souvenir", collection: @souvenirs %> 
+    <% @souvenirs.each do | souvenir | %>
+        <%= render partial:"souvenir", locals: {souvenir: souvenir} %> 
+    <% end %>
 <%= will_paginate  @souvenirs %>
