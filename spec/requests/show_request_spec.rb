@@ -22,10 +22,11 @@ RSpec.describe 'GET /souvenir', type: :request do
 
     context 'souvenirに写真が無いとき' do
         
+
         it 'no_picture.pngを出力する' do
             @souvenir = FactoryBot.create(:no_picture_souvenir)
             get "/souvenirs" + "/" + @souvenir[:id].to_s
-            expect(response.body).to include(File.open(File.join(Rails.root, '/app/assets/images/no_picture.png')))
+            expect(response.body).to include(File.open(File.join(Rails.root, "/app/assets/images/no_picture.png")))
         end
     end
 end

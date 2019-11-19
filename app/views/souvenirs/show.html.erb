@@ -1,6 +1,19 @@
-<%= image_tag 'no_picture.png' %>
-　<% if @souvenir.picture?  %>
-　　<%= image_tag @souvenir.picture.thumb.url ,size: '300x300' %>
-　<% else %>
-　　<%= image_tag 'no_picture.png',size: '300x300' %>
-　<% end %>
+<div class = "row souvenir_box">
+    <div class = "souvenir_name col-sm-12"><%= @souvenir.name%></div>
+        <div class = "col-sm-8">
+            <div class="row">
+                <div class = "souvenir_spot col-sm-12 souvenir_text-items "><%= @souvenir.spot%></div>
+                <div class = "souvenir_price col-sm-12 souvenir_text-items"><%= @souvenir.price%></div>
+                <div class = "souvenir_genre col-sm-12 souvenir_text-items"><%= @souvenir.genre%></div>
+            </div>
+        </div>
+    <div class = "col-sm-4">  
+      <% if @souvenir.picture? %>
+    　　<%= image_tag @souvenir.picture.thumb.url %>
+    　<% else %>
+        <p>noimages</p>
+        <% end %>
+    </div>
+    <div class = "col-sm-12"><%= @souvenir.comment%></div>
+</div>
+
