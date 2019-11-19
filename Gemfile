@@ -41,7 +41,7 @@ group :test do
   gem 'database_cleaner', '~> 1.0.1'
   gem 'launchy', '~> 2.3.0'
   gem 'selenium-webdriver', '~> 3.142', '>= 3.142.6'
-  gem 'chromedriver-helper'
+  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
