@@ -1,5 +1,7 @@
 class SouvenirsController < ApplicationController
 
+  before_action :set_souvenir_params, only: [:show, :edit, :update, :destroy]
+
   def new
     @souvenir = Souvenir.new
     flash[:info] = "項目を記入してください"
@@ -20,11 +22,9 @@ class SouvenirsController < ApplicationController
   end
 
   def show
-    @souvenir = Souvenir.find(params[:id])
   end
 
   def edit
-    @souvenir = Souvenir.find(params[:id])
   end
 
   def update
@@ -37,5 +37,9 @@ class SouvenirsController < ApplicationController
 
   def souvenir_params
     params.require(:souvenir).permit(:name, :spot, :price, :picture, :genre, :comment)
+  end
+
+  def set_souvenir_params
+    @souvenir = Souvenir.find(params[:id])
   end
 end

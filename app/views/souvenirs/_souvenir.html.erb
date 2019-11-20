@@ -3,9 +3,9 @@
     <div class = "souvenir_name col-sm-12"><%= souvenir.name%></div>
         <div class = "col-sm-8">
             <div class="row">
-                <div class = "souvenir_spot col-sm-12 souvenir_text-items "><%= souvenir.spot%></div>
-                <div class = "souvenir_price col-sm-12 souvenir_text-items"><%= souvenir.price%></div>
-                <div class = "souvenir_genre col-sm-12 souvenir_text-items"><%= souvenir.genre%></div>
+                <div class = "souvenir_spot col-sm-12 souvenir_text-items ">場所：<%= souvenir.spot%></div>
+                <div class = "souvenir_price col-sm-12 souvenir_text-items">値段：<%= souvenir.price%></div>
+                <div class = "souvenir_genre col-sm-12 souvenir_text-items">ジャンル：<%= souvenir.genre%></div>
             </div>
         </div>
     <div class = "col-sm-4">  
@@ -14,6 +14,7 @@
     　<% else %>
         <p>noimages</p>
         <% end %>
+    <div class = "col-sm-12 souvenir_text-items">コメント：<%= @souvenir.comment%></div>
     </div>
 </div>
 <% end %>

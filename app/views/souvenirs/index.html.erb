@@ -1,5 +1,7 @@
-<%= will_paginate  @souvenirs %>
-    <% @souvenirs.each do | souvenir | %>
-        <%= render partial:"souvenir", locals: {souvenir: souvenir} %> 
-    <% end %>
-<%= will_paginate  @souvenirs %>
+<div id = "index">
+    <%= will_paginate  @souvenirs %>
+        <% @souvenirs.each do | souvenir | %>
+            <%= render partial:"souvenir", locals: {souvenir: souvenir} %> 
+        <% end %>
+    <%= will_paginate  @souvenirs %>
+</div>
