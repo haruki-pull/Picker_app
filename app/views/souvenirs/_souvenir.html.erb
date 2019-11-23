@@ -13,8 +13,8 @@
     　　<%= image_tag souvenir.picture.thumb.url %>
     　<% else %>
         <p>noimages</p>
-        <% end %>
-    <div class = "col-sm-12 souvenir_text-items">コメント：<%= @souvenir.comment%></div>
+      <% end %>
     </div>
+    <div class = "col-sm-12 souvenir_text-items">コメント：<%= souvenir.comment%></div>
 </div>
 <% end %>
