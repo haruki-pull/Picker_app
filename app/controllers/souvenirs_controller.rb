@@ -28,6 +28,13 @@ class SouvenirsController < ApplicationController
   end
 
   def update
+    if @souvenir.update(souvenir_params)
+      flash[:success] = "編集に成功しました"
+      redirect_to action: 'index'
+    else
+      render 'edit'
+    end
+
   end
   
   def destroy
