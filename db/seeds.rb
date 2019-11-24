@@ -16,3 +16,11 @@ Souvenir.create!(name: name,
                  picture: File.open("./app/assets/images/rs_siroikoi2.jpg"),
                  comment: comment) 
 end
+
+20.times do 
+      name = Faker::Name.name
+      email = Faker::Internet.email
+
+User.create!(name: name,
+             email:email)
+end
