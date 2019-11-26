@@ -1,7 +1,5 @@
 <div id = "index">
     <%= will_paginate  @souvenirs %>
-        <% @souvenirs.each do | souvenir | %>
-            <%= render partial:"shared/souvenir", locals: {souvenir: souvenir} %> 
-        <% end %>
+            <%= render partial:"shared/souvenir", collection: @souvenirs %> 
     <%= will_paginate  @souvenirs %>
 </div>
