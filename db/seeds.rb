@@ -22,5 +22,6 @@ end
       email = Faker::Internet.email
 
 User.create!(name: name,
-             email:email)
+             email:email,
+             password_digest:"foobar")
 end
