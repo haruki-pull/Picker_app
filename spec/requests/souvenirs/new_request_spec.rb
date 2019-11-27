@@ -10,7 +10,7 @@ RSpec.describe 'POST /souvenirs', type: :request do
     
     context '全てのパラメーターが揃っているとき' do
 
-        before(:each)   do
+        before(:each) do
             post '/souvenirs', params: { souvenir: FactoryBot.attributes_for(:pass_souvenir) }
         end
 

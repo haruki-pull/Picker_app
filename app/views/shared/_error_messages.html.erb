@@ -1,7 +1,7 @@
-<% if @souvenir.errors.any? %>
-    <div class="alert alert-danger">入力内容に<%= @souvenir.errors.count%>箇所の不備が存在します</div>
+<% if object.errors.any? %>
+    <div class="alert alert-danger">入力内容に<%= object.errors.count%>箇所の不備が存在します</div>
     <ul>
-    <% @souvenir.errors.full_messages.each do |msg| %>
+    <% object.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
     <% end %>
     </ul>
