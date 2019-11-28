@@ -29,6 +29,7 @@ RSpec.describe 'POST /users', type: :request do
         end
 
         it "リダイレクト先がshowアクション" do
+            expect(response).to redirect_to ("http://www.example.com/users/1 ")
         end
 
     end

@@ -1,16 +1,16 @@
 FactoryBot.define do
-  factory :pass_user do
+  factory :pass_user, class: User do
     name { "MyString" }
     email { Faker::Internet.email }
     password {"MyString"}
     password_confirmation {"MyString"}
   end
 
-  factory :falure_user do
+  factory :failure_user, class: User do
     name { "MyString" }
-    email { facker.com }
+    email { "facker@kencom.com" }
     password {"MyString"}
-    password_confirmation {"MyString"}
+    password_confirmation {""}
   end
 end
 
