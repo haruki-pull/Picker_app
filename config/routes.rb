@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
 root 'souvenirs#index'
 get '/post', to: 'souvenirs#new'
 
