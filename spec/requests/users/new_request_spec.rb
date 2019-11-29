@@ -25,31 +25,32 @@ RSpec.describe 'POST /users', type: :request do
         end
 
         it "flashメッセージが出る" do
-            expect(flash[:sucess]).not_to be_empty
+            expect(flash[:success]).not_to be_empty
         end
 
         it "リダイレクト先がshowアクション" do
-            expect(response).to redirect_to ("http://www.example.com/users/1 ")
+            expect(response).to redirect_to ("http://www.example.com/users/#{User} ")
         end
 
     end
 
 
     context "必要な条件が揃っていない時" do
+
+        before(:each) do
+            post '/users', params: {user: FactoryBot.attributes_for(:failure_user)}
+        end
+
         it "ユーザー数が増えない" do
             expect{
                 post '/users', params: {user: FactoryBot.attributes_for(:failure_user)}
             }.to change(User, :count).by(0)
         end
 
-        it "フラッシュメッセージを出す" do
-            expect(flash[:sucess]).to be_empty
+        it "エラーメッセージを出す" do
+            expect(response.body).to include("箇所の不備が存在します")
         end
     end
 
-    context "emailが重複しているとき" do
-        it "フラッシュメッセージを出す" do
-        end
-    end
 end
 
