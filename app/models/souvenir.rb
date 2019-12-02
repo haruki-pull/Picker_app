@@ -1,4 +1,5 @@
 class Souvenir < ApplicationRecord
+    belongs_to :user
     #画像のアップローダー
     mount_uploader :picture ,PictureUploader
     #存在性のvalidation
