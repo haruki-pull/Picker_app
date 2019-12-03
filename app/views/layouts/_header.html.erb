@@ -8,8 +8,13 @@
       <%= link_to "おみやげ Picker", root_path, id: "logo" %>
     <ul class="navbar-nav ml-auto">
         <li class="nav-item"><%= link_to "ホーム", root_path, class:"nav-link" %></li>
-        <li class="nav-item"><%= link_to "ログイン", login_path, class:"nav-link" %></li>      
-        <li class="nav-item"><%= link_to "投稿", post_path, class:"nav-link" %></li>      
+        <% if logged_in? %>
+          <li class="nav-item"><%= link_to "投稿", post_path, class:"nav-link" %></li>
+          <li class="nav-item"><%= link_to "myページ", user_path(current_user), class:"nav-link" %></li>
+          <li class="nav-item"><%= link_to "ログアウト", logout_path, class:"nav-link" %></li>
+        <% else%>
+          <li class="nav-item"><%= link_to "ログイン", login_path, class:"nav-link" %></li>     
+        <% end %> 
     </ul>
   </div>
 </nav>
