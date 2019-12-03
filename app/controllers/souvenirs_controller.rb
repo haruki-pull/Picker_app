@@ -12,7 +12,7 @@ class SouvenirsController < ApplicationController
   end
 
   def create
-    @souvenir = Souvenir.create(souvenir_params)
+    @souvenir = current_user.souvenirs.build(souvenir_params)
       if @souvenir.save
         flash[:success] = "投稿に成功しました"
         redirect_to action: 'index'
