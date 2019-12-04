@@ -1,14 +1,25 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @souvenirs.first.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div id = "show">
+    <div class = "row">
+    <% if @user.souvenirs.any? %>
+        <div class = "col-sm-4">
+    <% else %>
+        <div class = "col-sm-12 text-center">
+    <% end %>
+            <section class="user_info">
+                <h3 class = "user_name">
+                    <%= @user.name %>
+                </h3>
+                <h3>ユーザー登録情報変更</h3>
+                <p class = "edit_alert">項目を編集後<br>Update Userボタンを押してください</p>
+                <%= render partial:"form", locals: {user: @user} %> 
+            </section>
+        </div>
+        <% if @user.souvenirs.any? %>
+        <div class = "col-sm-8">
+            <%= will_paginate  @souvenirs %>
+                <%= render partial:"shared/souvenir", collection: @souvenirs %> 
+            <%= will_paginate  @souvenirs %>
+        </div>
+        <% end %>
+    </div>
+</div>

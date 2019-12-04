@@ -21,6 +21,17 @@ $gray-medium-light: #eaeaea;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
 }
+
+@mixin flash_info {
+  border-radius: 0.23rem;
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
 /* universal */
 
 
@@ -130,15 +141,12 @@ a{
     margin-right: 5em
 }
 
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  color: rgba(0, 0, 0, 0.5);
-    .list-group-item{
-      text-align: center;
-    }
+/*footer*/
+footer{
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(218, 218, 218, 0.87);
 }
 
 /*souvenirs/indexページ*/
@@ -162,10 +170,13 @@ footer {
   margin: auto;
 }
 
-/*footer*/
-footer{
-  width: 70%;
-  margin: auto;
+/*users/show*/
+.user_info{
   text-align: center;
-  background-color: rgba(218, 218, 218, 0.87);
+  h3{
+    margin-top: 2rem;
+  }
+}
+.edit_alert{
+  @include flash_info
 }
