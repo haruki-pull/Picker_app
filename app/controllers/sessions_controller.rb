@@ -16,6 +16,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-  
+    logout
+    flash.now[:info] = "ログアウトしました"
+    redirect_to root_url
+
   end
 end

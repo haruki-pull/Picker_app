@@ -21,4 +21,10 @@ RSpec.describe "User",type: :system do
     click_button 'Log in'
     expect(page).to have_content 'ログインに成功しました'
   end
+
+  it 'ログアウト' do
+    visit '/users/user.id'
+    find(".edit_alert")
+    expect(page).to have_content 'ログアウトしました'
+  end
 end
