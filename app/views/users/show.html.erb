@@ -1,10 +1,6 @@
 <div id = "show">
     <div class = "row">
-    <% if @user.souvenirs.any? %>
         <div class = "col-sm-4">
-    <% else %>
-        <div class = "col-sm-12 text-center">
-    <% end %>
             <section class="user_info">
                 <h3 class = "user_name">
                     <%= @user.name %>
@@ -14,12 +10,17 @@
                 <%= render partial:"form", locals: {user: @user} %> 
             </section>
         </div>
-        <% if @user.souvenirs.any? %>
         <div class = "col-sm-8">
-            <%= will_paginate  @souvenirs %>
-                <%= render partial:"shared/souvenir", collection: @souvenirs %> 
-            <%= will_paginate  @souvenirs %>
+            <section class="user_souvenirs">
+                <% if @user.souvenirs.any? %>
+                    <%= will_paginate  @souvenirs %>
+                        <%= render partial:"shared/souvenir", collection: @souvenirs %> 
+                    <%= will_paginate  @souvenirs %>
+                <% else %>
+                    <p>初めての投稿をしてみませんか？</p>
+                    <button type="button" class="btn btn-info"><%= link_to "おすすめのお土産を投稿する",new_souvenir_path %></button>
+                <% end %>
+            </section>
         </div>
-        <% end %>
     </div>
 </div>

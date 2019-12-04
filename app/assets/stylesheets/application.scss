@@ -22,7 +22,7 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
-@mixin flash_info {
+@mixin bootstrap_info {
   border-radius: 0.23rem;
   color: #0c5460;
   background-color: #d1ecf1;
@@ -171,12 +171,19 @@ footer{
 }
 
 /*users/show*/
-.user_info{
+section{
   text-align: center;
   h3{
     margin-top: 2rem;
   }
+  .edit_alert{
+    @include bootstrap_info;
+  }
 }
-.edit_alert{
-  @include flash_info
+.btn{
+  @include bootstrap_info;
+  margin-top: 10rem;
+  &:hover {
+    opacity: 0.9;
+  }
 }
