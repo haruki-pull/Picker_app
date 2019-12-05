@@ -22,9 +22,9 @@ RSpec.describe "User",type: :system do
     expect(page).to have_content 'ログインに成功しました'
   end
 
-  it 'ログアウト' do
-    visit '/users/user.id'
-    find(".edit_alert")
+  xit 'ログアウト' do
+    visit '/users/session[:user_id]'
+    find.all(".edit_alert")
     expect(page).to have_content 'ログアウトしました'
   end
 end

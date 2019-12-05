@@ -18,7 +18,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-will_paginate'
 gem 'pry-rails'
 gem 'bcrypt', '~> 3.1', '>= 3.1.13'
-gem 'better_errors', '~> 2.5', '>= 2.5.1'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -33,11 +33,12 @@ group :development, :test do
 end
 
 group :development do
-
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'binding_of_caller', '~> 0.8.0'
+  gem 'better_errors', '~> 2.5', '>= 2.5.1'
 end
 
 group :test do
