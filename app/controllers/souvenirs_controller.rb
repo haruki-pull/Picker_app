@@ -1,7 +1,7 @@
 class SouvenirsController < ApplicationController
 
   before_action :set_souvenir_params, only: [:show, :edit, :update, :destroy]
-  before_action :already_logged_in, only: [:edit, :update, :destroy]
+  before_action :already_logged_in, only: [:create, :edit, :update, :destroy]
   def new
     @souvenir = Souvenir.new
     flash[:info] = "項目を記入してください"
