@@ -5,8 +5,7 @@
 #redirectの可否
 
 require 'rails_helper'
-
-RSpec.describe 'GET #NEW', type: :request do
+RSpec.describe SouvenirsController, type: :request do
 
     it 'リクエスト成功 'do
         get '/post'

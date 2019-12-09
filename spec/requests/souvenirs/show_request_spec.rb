@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Souvenir', type: :request do
+RSpec.describe SouvenirsController, type: :request do
     
     describe "GET #show" do
         let(:souvenir) { FactoryBot.create(:souvenir) }
@@ -8,9 +8,7 @@ RSpec.describe 'Souvenir', type: :request do
         context 'souvenirの投稿が存在するとき' do
             
             it 'リクエストの成功' do
-                
                 get souvenir_url souvenir.id
-                #get '/souvenirs/souvenir.id'
                 expect(response.status).to eq 200
             end
         end
