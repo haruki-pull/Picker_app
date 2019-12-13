@@ -1,12 +1,11 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :destroy]
-  before_action :already_logged_in, only: [:edit, :update, :destroy]
+  before_action :set_user, only: [:edit, :show, :update, :destroy]
+  before_action :already_logged_in, only: [:edit, :show, :update, :destroy]
   def index
     @users = User.all
   end
 
   def show
-    @user = User.find(params[:id])
     @souvenirs = @user.souvenirs.paginate(page: params[:page])
   end
 

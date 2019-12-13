@@ -44,9 +44,7 @@ RSpec.configure do |config|
 
   #handlessモード
   config.before(:each) do |example|
-    if example.metadata[:type] == :system
-      driven_by :selenium, using: :headless_chrome, screen_size: [1400, 1400]
-    end
+
   end
 
 #   javascript使う時だけchrome起動
