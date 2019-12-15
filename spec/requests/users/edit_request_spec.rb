@@ -12,11 +12,11 @@ RSpec.describe UsersController, type: :request do
                     expect(response.status).to eq 302
                 end
 
-                xit '@userの取得' do
+                it '@userの取得' do
                 #rspec内でsessionを使う方法探す
-                    post :create, session: {user_id: 1}
-                    login(user)
+                    log_in_as(user)
                     get user_url user.id
+                    debugger
                     expect(response.body).to include "MyString"
                 end
         end
