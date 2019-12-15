@@ -38,6 +38,8 @@ class SouvenirsController < ApplicationController
   end
   
   def destroy
+    #@souvenir.destroy
+    #flash
   end
 
   private
