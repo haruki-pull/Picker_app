@@ -12,6 +12,10 @@ FactoryBot.define do
       trait :failure do
         name {' '}
       end
-      
+
+      trait :new_name do
+        name {"YourString"}
+      end
+            
     end
   end

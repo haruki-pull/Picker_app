@@ -187,3 +187,14 @@ section{
     opacity: 0.9;
   }
 }
+
+/*souvenirs/edit*/
+.souvenir_edit{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*souvenirs/show*/
+#s_show .souvenir_box{
+  pointer-events: none;
+}

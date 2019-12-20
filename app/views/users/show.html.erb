@@ -1,4 +1,4 @@
-<div id = "show">
+<div id = "u_show">
     <div class = "row">
         <div class = "col-sm-4">
             <section class="user_info">
@@ -16,6 +16,7 @@
                     <%= will_paginate  @souvenirs %>
                         <%= render partial:"shared/souvenir", collection: @souvenirs %> 
                     <%= will_paginate  @souvenirs %>
+                    
                 <% else %>
                     <p>初めての投稿をしてみませんか？</p>
                     <button type="button" class="btn btn-info"><%= link_to "おすすめのお土産を投稿する",new_souvenir_path %></button>

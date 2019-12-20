@@ -1,20 +1,22 @@
 <%= link_to souvenir_path(souvenir) do  %>
 <div class = "row souvenir_box">
     <div class = "souvenir_name col-sm-12"><%= souvenir.name%></div>
-        <div class = "col-sm-8">
+        <div class = "col-sm-7">
             <div class="row">
                 <div class = "souvenir_spot col-sm-12 souvenir_text-items ">場所：<%= souvenir.spot%></div>
                 <div class = "souvenir_price col-sm-12 souvenir_text-items">値段：<%= souvenir.price%></div>
                 <div class = "souvenir_genre col-sm-12 souvenir_text-items">ジャンル：<%= souvenir.genre%></div>
             </div>
         </div>
-    <div class = "col-sm-4">  
-      <% if souvenir.picture? %>
-    　　<%= image_tag souvenir.picture.thumb.url %>
-    　<% else %>
-        <p>noimages</p>
-      <% end %>
-    </div>
+        <div class = "col-sm-4">  
+        <% if souvenir.picture? %>
+        　　<%= image_tag souvenir.picture.thumb.url %>
+        　<% else %>
+            <p>noimages</p>
+        <% end %>
+        </div>
+        
+
     <div class = "col-sm-12 souvenir_text-items">コメント：<%= souvenir.comment%></div>
 </div>
 <% end %>
