@@ -9,13 +9,13 @@ FactoryBot.define do
       comment {"MyString"}
       user
 
-      trait :failure do
-        name {' '}
-      end
-
       trait :new_name do
         name {"YourString"}
       end
-            
+         
+      trait :invalid_name do
+        name {" "}
+      end
+      
     end
   end

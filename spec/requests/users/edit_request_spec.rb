@@ -16,7 +16,6 @@ RSpec.describe UsersController, type: :request do
 
                 it '@userの取得' do
                     get user_url user.id
-                    debugger
                     expect(response.body).to include "MyString"
                 end
         end

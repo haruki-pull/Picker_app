@@ -15,6 +15,7 @@
                 <% if @user.souvenirs.any? %>
                     <%= will_paginate  @souvenirs %>
                         <%= render partial:"shared/souvenir", collection: @souvenirs %> 
+                        <%= link_to "投稿内容の編集", edit_souvenir_path %>
                     <%= will_paginate  @souvenirs %>
                     
                 <% else %>
