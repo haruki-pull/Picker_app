@@ -38,8 +38,9 @@ class SouvenirsController < ApplicationController
   end
   
   def destroy
-    #@souvenir.destroy
-    #flash
+    @souvenir.destroy
+    flash[:success] = "Micropost deleted"
+    redirect_to request.referrer || root_url
   end
 
   private

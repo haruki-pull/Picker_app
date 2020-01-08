@@ -40,6 +40,7 @@ RSpec.describe SouvenirsController, type: :request do
             end
 
             it 'souvenirs/editがレンダリングされる' do
+                debugger
                 put souvenir_url souvenir ,params: { souvenir: FactoryBot.attributes_for(:souvenir,:invalid_name) }
                 expect(response).to render_template(:edit)
             end
