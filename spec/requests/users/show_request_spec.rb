@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :request do
     
-    describe 'POST /users' do
+    describe 'POST #users' do
 
         context do
             let(:user) { FactoryBot.create(:user) }    
@@ -10,7 +10,7 @@ RSpec.describe UsersController, type: :request do
                 allow_any_instance_of(ActionDispatch::Request).to receive(:session).and_return(user_id: user.id)
             end
                 it 'リクエスト成功' do
-                    get user_url user.id
+                    get user_url user
                     expect(response.status).to eq 200
                 end
 

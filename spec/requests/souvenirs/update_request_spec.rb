@@ -20,7 +20,7 @@ RSpec.describe SouvenirsController, type: :request do
                 end.to change { Souvenir.find(souvenir.id).name }.from('MyString').to('YourString')
             end
 
-           it '変更後souvenirs/indexにリダイレクト' do
+           it '変更後rootにリダイレクト' do
                 put souvenir_url souvenir ,params: { souvenir: FactoryBot.attributes_for(:souvenir,:new_name) }
                 expect(response).to redirect_to ('http://www.example.com/')
             end

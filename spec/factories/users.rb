@@ -6,9 +6,9 @@ FactoryBot.define do
     password {"MyString"}
     password_confirmation {"MyString"}
     
-    # souvenirs {[
-    #   FactoryBot.build(:souvenir, user: nil)
-    #  ]}
+    trait :new_name do
+      name {"YourString"}
+    end
 
     trait :failure do
       name {' '}

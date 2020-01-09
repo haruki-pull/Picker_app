@@ -1,9 +1,3 @@
-#httpステータスが正常に送られているか
-#rendertemplateが上手く行っているか
-#インスタンス変数に値が代入されているか
-#モデル数の増減
-#redirectの可否
-
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :request do
