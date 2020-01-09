@@ -15,7 +15,6 @@ RSpec.describe SouvenirsController, type: :request do
     
             it 'souvenirが削除される' do
                 expect do
-                    debugger
                     delete souvenir_url souvenir
                 end.to change(Souvenir, :count).by(-1)
             end
