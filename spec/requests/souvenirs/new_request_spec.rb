@@ -1,14 +1,9 @@
-#httpステータスが正常に送られているか
-#rendertemplateが上手く行っているか
-#インスタンス変数に値が代入されているか
-#モデル数の増減
-#redirectの可否
-
 require 'rails_helper'
+
 RSpec.describe SouvenirsController, type: :request do
 
     it 'リクエスト成功 'do
-        get '/post'
+        get post_url
         expect(response.status).to eq 200
     end
 end

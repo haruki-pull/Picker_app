@@ -10,7 +10,7 @@ FactoryBot.define do
       name {"YourString"}
     end
 
-    trait :failure do
+    trait :invalid_name do
       name {' '}
     end
     

@@ -8,7 +8,7 @@ RSpec.describe SouvenirsController, type: :request do
         context 'souvenirの投稿が存在するとき' do
             
             it 'リクエストの成功' do
-                get souvenir_url souvenir.id
+                get souvenir_url souvenir
                 expect(response.status).to eq 200
             end
         end

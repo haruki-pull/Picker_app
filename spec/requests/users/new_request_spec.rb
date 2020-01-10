@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :request do
-    describe 'user/new' do
+    describe 'user#new' do
         it 'リクエストの成功' do
             get new_user_url
             expect(response.status).to eq 200
@@ -38,12 +38,12 @@ end
     # context "必要な条件が揃っていない時" do
 
     #     before(:each) do
-    #         post '/users', params: {user: FactoryBot.attributes_for(:failure_user)}
+    #         post '/users', params: {user: FactoryBot.attributes_for(:invalid_name_user)}
     #     end
 
     #     it "ユーザー数が増えない" do
     #         expect{
-    #             post '/users', params: {user: FactoryBot.attributes_for(:failure_user)}
+    #             post '/users', params: {user: FactoryBot.attributes_for(:invalid_name_user)}
     #         }.to change(User, :count).by(0)
     #     end
 
